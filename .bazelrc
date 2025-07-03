@@ -7,5 +7,7 @@ build --extra_toolchains=//:java17_toolchain_with_javax21api_definition
 # disable header compilation (does not work with classpath trick done by 'java17_toolchain_with_javax21api_definition')
 build --nojava_header_compilation
 
+common --enable_workspace
+
 # create a .bazelrc-local to customize further
 try-import %workspace%/.bazelrc-local
